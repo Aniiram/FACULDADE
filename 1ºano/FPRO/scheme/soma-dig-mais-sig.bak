@@ -1,0 +1,14 @@
+(define Soma-dig-mais-sig
+  (lambda (N ND)
+    (letrec ((conta-digitos
+              (lambda (N)
+                (if (zero? N)
+                    0
+                    (add1 (conta-digitos (quotiente N 10))))))
+             (Soma-digitos
+              (lambda (n)
+                (if (< N 10)
+                    N
+                    (+ (remainder N 10) (Soma-digitos
+
+  

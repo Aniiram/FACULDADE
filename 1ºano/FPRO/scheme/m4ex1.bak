@@ -1,0 +1,12 @@
+(define somatorio
+  (lambda (fun inf sup passo)
+    (if (> inf sup)
+        0
+        (+ (fun inf)
+           (somatorio fun (passo inf) sup passo)))))
+
+(define triplo (lambda (x) (* 3 x)))
+
+(define pi-aprox
+  (lambda (n)
+    (* 4 (- (somatório (lambda (x) (/ 1 x)) 1 n (lambda (x) (+ 4 x))) (somatório (lambda (x) (/ 1 x)) 3 n (lambda (x) (+ 4 x)))))))  

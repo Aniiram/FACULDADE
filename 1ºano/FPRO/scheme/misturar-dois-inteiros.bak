@@ -1,0 +1,9 @@
+(define misturar-dois-inteiros
+  (lambda (a b)
+    (cond
+      ((zero? b) a)
+      ((zero? a) b)
+      (else
+       (+ (remainder a 10)
+          (* 10 (remainder b 10))
+          (* 100 (misturar-dois-inteiros (quotient a 10) (quotient b 10))))))))
